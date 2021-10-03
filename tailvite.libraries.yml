@@ -1,0 +1,21 @@
+# Use the source path instead of destination. "scss/styles.scss" instead of "dist/css".
+# Paths will be altered for local or prod with hook_library_info_alter().
+global:
+  css:
+    theme:
+      scss/styles.scss: {}
+  js:
+    js/main.js: { attributes: { type: 'module'}}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+
+hot-module-replacement:
+  header: true
+  js:
+    http://localhost:12321/@vite/client: {type: external, attributes: { type: 'module'}}
+
+fontinter:
+  css:
+    theme:
+      '//rsms.me/inter/inter.css': { type: external, minified: false }

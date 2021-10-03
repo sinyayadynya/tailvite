@@ -5,10 +5,10 @@ base theme: stable
 core: 8.x
 core_version_requirement: ^8 || ^9
 
-# libraries:
-#   - vite/global-styling
-#   - vite/global-js
-#   - vite/hot-module-replacement
+libraries:
+  - tailvite/global
+  - tailvite/hot-module-replacement
+  - tailvite/fontinte
 
 regions:
   header: Header

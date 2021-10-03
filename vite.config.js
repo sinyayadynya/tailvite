@@ -1,26 +1,21 @@
-import liveReload from 'vite-plugin-live-reload'
+import liveReload from 'vite-plugin-live-reload';
 
 export default {
-  plugins: [
-    liveReload(__dirname+'/**/*.(php|inc|theme|twig)')
-  ],
+  plugins: [liveReload(__dirname + '/**/*.(php|inc|theme|twig)')],
 
   build: {
     // generate manifest.json in outDir
     manifest: true,
     rollupOptions: {
       // overwrite default .html entry
-      input: [
-        '/src/style.css',
-        '/src/main.js',
-      ],
+      input: ['/src/style.css', '/src/main.js'],
       // Remove the [hash] since Drupal will take care of that.
       output: {
         entryFileNames: `[name].js`,
         chunkFileNames: `chunks/[name].[hash].js`,
-        assetFileNames: `[name].[ext]`
-      }
-    }
+        assetFileNames: `[name].[ext]`,
+      },
+    },
   },
 
   server: {
@@ -34,12 +29,13 @@ export default {
 
     hmr: {
       host: 'localhost',
-    }
-  },
-
-  resolve: {
-    alias: {
-      'jquery': '/js/jquery.module.js'
     },
   },
-}
+
+  // not sure about this one, inspired from https://github.com/segovia94/drupal-vite-poc
+  resolve: {
+    alias: {
+      jquery: '/js/jquery.module.js',
+    },
+  },
+};
