@@ -33,6 +33,7 @@ To be fast and fun and simple
 - Single File Components: https://drupal.org/projects/sfc
 - Bamboo Twig: https://drupal.org/projects/bamboo_twig
 - Simplify Menu: https://drupal.org/projects/simplify_menu
+- External-use Icons: https://drupal.org/projects/ex_icons
 
 ## Patch
 - https://www.drupal.org/project/sfc/issues/3205989
