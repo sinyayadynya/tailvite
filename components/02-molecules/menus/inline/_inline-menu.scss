@@ -1,0 +1,22 @@
+.inline-menu {
+  @apply -mx-5 -my-2 flex flex-wrap justify-center;
+}
+
+.inline-menu__item {
+  @apply mr-4 mb-2;
+
+  @include lg {
+    @apply inline;
+    @apply mb-4;
+  }
+
+  &:last-child {
+    @apply mr-0;
+  }
+}
+
+.inline-menu__link {
+  @include link;
+
+  @apply text-xs font-semibold tracking-tight no-underline uppercase;
+}

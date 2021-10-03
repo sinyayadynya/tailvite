@@ -1,0 +1,25 @@
+{
+  "name": "tailvite",
+  "version": "0.0.1",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.2",
+    "@tailwindcss/forms": "^0.4.0-alpha.1",
+    "@tailwindcss/typography": "^0.5.0-alpha.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.4.1",
+    "tailwindcss": "^3.0.0-alpha.1",
+    "vite": "^2.6.0"
+  },
+  "dependencies": {
+    "alpinejs": "^3.4.2",
+    "sass": "^1.42.1",
+    "vite-plugin-live-reload": "^2.1.0"
+  }
+}

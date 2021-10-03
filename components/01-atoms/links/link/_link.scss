@@ -1,0 +1,11 @@
+@mixin link {
+  @apply text-red-500;
+
+  &:hover {
+    @apply text-red-400;
+  }
+}
+
+.link {
+  @include link;
+}

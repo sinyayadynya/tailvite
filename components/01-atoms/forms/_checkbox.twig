@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * Theme override for an 'input' #type form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see template_preprocess_input()
+ */
+#}
+<input{{ attributes.addClass('focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded') }}
+    type="checkbox" />
+    {{ children }}

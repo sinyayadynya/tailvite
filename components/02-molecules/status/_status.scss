@@ -1,0 +1,20 @@
+.status {
+
+    ul {
+        li {
+            @apply text-sm font-medium;
+        }
+    }
+
+    &--warning {
+        @apply text-yellow-800;
+    }
+
+    &--error {
+        @apply text-red-800;
+    }
+
+    &--status {
+        @apply text-green-800;
+    }
+}

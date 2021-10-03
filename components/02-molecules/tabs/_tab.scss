@@ -1,0 +1,24 @@
+.tabs__link,
+.tabs__link--local-tasks {
+  @apply whitespace-nowrap py-4 px-1 border-b-2 border-transparent font-medium text-sm leading-5 text-gray-500;
+
+  &:hover {
+    @apply text-gray-700 border-gray-500;
+  }
+
+  &:focus {
+    @apply outline-none text-gray-700 border-gray-500;
+  }
+
+  &.is-active {
+    @apply text-indigo-600 border-indigo-500;
+
+    @include lg {
+      // Empty
+    }
+
+    &:focus {
+      @apply outline-none text-indigo-800 border-indigo-700;
+    }
+  }
+}

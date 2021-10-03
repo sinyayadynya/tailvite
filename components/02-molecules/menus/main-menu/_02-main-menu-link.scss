@@ -1,0 +1,51 @@
+/* A */
+
+.header__menu-mobile {
+  .main-menu__link {
+    @apply mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 transition duration-150 ease-in-out;
+
+    &:hover {
+      @apply text-gray-800 bg-gray-50 border-gray-300;
+    }
+
+    &:focus {
+      @apply outline-none text-gray-800 bg-gray-50 border-gray-300;
+    }
+  }
+}
+
+.header__menu {
+  .main-menu__link {
+
+    @include sm {
+      @apply inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 transition duration-150 ease-in-out;
+      @apply min-h-full;
+
+      &:hover {
+        @apply text-gray-700 border-gray-300;
+      }
+
+      &:focus {
+        @apply outline-none text-gray-700 border-gray-300;
+      }
+
+      &--active,
+      &:active,
+      &.active {
+        @apply border-indigo-500 text-gray-900;
+
+        &:focus {
+          @apply outline-none border-indigo-700;
+        }
+      }
+
+      &--sub::after {
+        display: none;
+      }
+    }
+
+    @include lg {
+      @apply px-4;
+    }
+  }
+}

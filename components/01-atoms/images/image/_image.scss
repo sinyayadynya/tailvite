@@ -1,0 +1,16 @@
+@mixin image {
+  @apply block h-auto max-w-full;
+}
+
+img,
+picture {
+  @include image;
+}
+
+figure {
+    @apply m-0;
+}
+
+.figure__caption {
+    @apply italic;
+}

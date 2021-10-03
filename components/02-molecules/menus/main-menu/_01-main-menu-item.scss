@@ -1,0 +1,10 @@
+/* LI */
+.main-menu__item {
+  @include sm {
+    @apply min-h-full ml-8;
+
+    &:nth-child(1) {
+      @apply ml-0;
+    }
+  }
+}

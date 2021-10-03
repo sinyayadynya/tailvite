@@ -1,0 +1,14 @@
+root: true
+extends:
+  - prettier
+  - plugin:prettier/recommended
+plugins:
+  - prettier
+env:
+  es6: true
+  browser: true
+globals:
+  expect: true
+  it: true
+  describe: true
+  Drupal: true

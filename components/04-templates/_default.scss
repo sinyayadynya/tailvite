@@ -1,0 +1,30 @@
+/*
+ * General Layout
+*/
+
+$sidebar-width: 33%;
+$gutter: $space;
+$main-width: calc(100% - (#{$sidebar-width} + #{$gutter}));
+
+.main {
+  &--with-sidebar {
+    @apply lg:grid lg:gap-4;
+
+    @include lg {
+      grid-template-areas: "content sidebar";
+      grid-template-columns: $main-width #{$sidebar-width};
+    }
+  }
+}
+
+.main-sidebar {
+  grid-area: sidebar;
+
+  @apply mb-8;
+}
+
+.main-content {
+  grid-area: content;
+
+  @apply w-full;
+}

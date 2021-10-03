@@ -1,0 +1,7 @@
+.form-item {
+    @apply text-sm text-gray-500 mb-4 max-w-lg flow-root;
+}
+
+.form-item__textfield {
+  @apply w-full;
+}

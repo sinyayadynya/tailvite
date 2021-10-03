@@ -1,0 +1,34 @@
+name: Tailvite
+type: theme
+description: 'A Drupal base theme build with Vite, TailwindCSS & AlpineJS.'
+base theme: stable
+core: 8.x
+core_version_requirement: ^8 || ^9
+
+# libraries:
+#   - vite/global-styling
+#   - vite/global-js
+#   - vite/hot-module-replacement
+
+regions:
+  header: Header
+  # hero: Hero
+  content: Content # the content region is required
+  sidebar: 'Sidebar'
+  footer: Footer
+
+# MUST install `components` module: `composer require drupal/components && drush en components -y`
+components:
+  namespaces:
+    base:
+        - components/00-base
+    atoms:
+        - components/01-atoms
+    molecules:
+        - components/02-molecules
+    organisms:
+        - components/03-organisms
+    templates:
+        - components/04-templates
+    pages:
+        - components/05-page

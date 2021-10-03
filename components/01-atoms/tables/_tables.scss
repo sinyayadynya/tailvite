@@ -1,0 +1,46 @@
+.table {
+    @apply table-auto;
+}
+
+.table__heading-cell {
+    @apply px-4 py-2;
+}
+
+.table__row {
+  &:nth-child(even) {
+      @apply bg-gray-100;
+  }
+}
+
+.table__cell {
+    @apply border px-4 py-2;
+}
+
+.table__footer-cell,
+.table__footer-cell:first-child {
+    @apply border-b-0;
+}
+
+/* TODO: BEM selectors should be applied to wysiwyg-created content */
+
+.text-long {
+  table {
+    @extend .table;
+  }
+
+  th {
+    @extend .table__heading-cell;
+  }
+
+  td {
+    @extend .table__cell;
+  }
+
+  tr {
+    @extend .table__row;
+  }
+
+  tfoot th {
+    @extend .table__footer-cell;
+  }
+}

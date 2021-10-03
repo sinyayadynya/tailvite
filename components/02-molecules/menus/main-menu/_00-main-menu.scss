@@ -1,0 +1,10 @@
+/* UL */
+.header__menu {
+  .main-menu {
+
+    @include sm {
+      @apply ml-6 flex;
+      @apply min-h-full;
+    }
+  }
+}

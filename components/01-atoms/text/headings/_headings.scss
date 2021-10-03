@@ -1,0 +1,193 @@
+/*
+ * Generic header styles:
+ * All arguments are optional. If not defined, the defaults below will be used
+*/
+
+@mixin heading-xl {
+  @apply text-gray-900;
+  @apply font-sans;
+  @apply font-extrabold;
+  @apply not-italic;
+  // @apply text-4xl;
+  // @apply leading-10; // In Emulsify: $line-height: 1.4
+  // @apply mb-2; // From Emulsify only
+  @apply w-auto; // From Emulsify only
+
+  @include sm {
+    // @apply text-5xl;
+    // @apply leading-none;
+  }
+
+  @include md {
+    // @apply text-6xl;
+  }
+
+  &__link {
+    @apply text-indigo-500;
+
+    &:hover {
+      @apply text-indigo-400;
+    }
+  }
+}
+
+@mixin heading-large {
+  @apply text-gray-900;
+  @apply font-sans;
+  @apply font-extrabold;
+  @apply not-italic;
+  // @apply text-3xl;
+  // @apply leading-10; // In Emulsify: $line-height: 1.4
+  // @apply mb-2; // From Emulsify only
+  @apply w-auto; // From Emulsify only
+
+  @include sm {
+    // @apply text-4xl;
+    // @apply leading-none;
+  }
+
+  @include md {
+    // @apply text-5xl;
+  }
+
+  &__link {
+    @apply text-indigo-500;
+
+    &:hover {
+      @apply text-indigo-400;
+    }
+  }
+}
+
+@mixin heading-medium {
+  @apply text-gray-900;
+  @apply font-sans;
+  @apply font-extrabold;
+  @apply not-italic;
+  // @apply text-2xl;
+  // @apply leading-10; // In Emulsify: $line-height: 1.6
+  // @apply mb-2; // From Emulsify only
+  // @apply w-auto; // From Emulsify only
+
+  @include sm {
+    // @apply text-3xl;
+    // @apply leading-none;
+  }
+
+  @include md {
+    // @apply text-4xl;
+  }
+
+  &__link {
+    @apply text-indigo-500;
+
+    &:hover {
+      @apply text-indigo-400;
+    }
+  }
+}
+
+@mixin heading-small {
+  @apply text-gray-900;
+  @apply font-sans;
+  @apply font-bold;
+  @apply not-italic;
+  // @apply text-xl;
+  // @apply leading-10; // In Emulsify: $line-height: 1.6
+  // @apply mb-2; // From Emulsify only
+  // @apply w-auto; // From Emulsify only
+
+  @include sm {
+    // @apply text-2xl;
+    // @apply leading-none;
+  }
+
+  @include md {
+    // @apply text-3xl;
+  }
+
+  &__link {
+    @apply text-indigo-500;
+
+    &:hover {
+      @apply text-indigo-400;
+    }
+  }
+}
+
+@mixin heading-xs {
+  @apply text-gray-900;
+  @apply font-sans;
+  @apply font-bold;
+  @apply not-italic;
+  // @apply text-lg;
+  // @apply leading-10; // In Emulsify: $line-height: 2
+  // @apply mb-2; // From Emulsify only
+  // @apply w-auto; // From Emulsify only
+
+  @include sm {
+    // @apply text-xl;
+    // @apply leading-none;
+  }
+
+  @include md {
+    // @apply text-2xl;
+  }
+
+  &__link {
+    @apply text-indigo-500;
+
+    &:hover {
+      @apply text-indigo-400;
+    }
+  }
+}
+
+.h1 {
+  @include heading-xl;
+}
+
+.h2 {
+  @include heading-large;
+}
+
+.h3 {
+  @include heading-medium;
+}
+
+.h4 {
+  @include heading-small;
+}
+
+.h5,
+.h6 {
+  @include heading-xs;
+}
+
+/* TODO: BEM selectors should be applied to wysiwyg-created content */
+
+.text-long {
+  h1 {
+    @extend .h1;
+  }
+
+  h2 {
+    @extend .h2;
+  }
+
+  h3 {
+    @extend .h3;
+  }
+
+  h4 {
+    @extend .h4;
+  }
+
+  h5 {
+    @extend .h5;
+  }
+
+  h6 {
+    @extend .h6;
+  }
+}
