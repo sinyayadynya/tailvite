@@ -25,8 +25,7 @@ To be fast and fun and simple
 
 ## To do
 - Check ESLint & Prettier setup + config
-- Remove all BEM utilities and replace with minimal Tailwind
-- Make it works!
+- Make it works: Tailwind + Alpine integration not yet successful!
 
 ## Requiered Drupal modules
 - Components: https://drupal.org/projects/components
