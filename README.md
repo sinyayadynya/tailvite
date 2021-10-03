@@ -25,6 +25,7 @@ To be fast and fun and simple
 
 ## To do
 - Check ESLint & Prettier setup + config
+- Remove all BEM utilities and replace with minimal Tailwind
 - Make it works!
 
 ## Requiered Drupal modules
