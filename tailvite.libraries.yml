@@ -3,9 +3,13 @@
 global:
   css:
     theme:
-      scss/styles.scss: {}
+      src/style.css: {}
+      # don't work with the above line, while the line below dosn't seem correct
+      # dist/style.css: {}
   js:
-    js/main.js: { attributes: { type: 'module'}}
+    src/main.js: { attributes: { type: 'module'}}
+    # don't work with the above line, while the line below dosn't seem correct
+    # dist/main.js: { attributes: { type: 'module'}}
   dependencies:
     - core/jquery
     - core/drupalSettings

@@ -8,7 +8,8 @@ export default {
     manifest: true,
     rollupOptions: {
       // overwrite default .html entry
-      input: ['/src/style.css', '/src/main.js'],
+      // check if '/components/style.scss' is correct
+      input: ['/components/style.scss', '/src/main.js'],
       // Remove the [hash] since Drupal will take care of that.
       output: {
         entryFileNames: `[name].js`,
@@ -35,7 +36,7 @@ export default {
   // not sure about this one, inspired from https://github.com/segovia94/drupal-vite-poc
   resolve: {
     alias: {
-      jquery: '/js/jquery.module.js',
+      jquery: '/src/jquery.module.js',
     },
   },
 };

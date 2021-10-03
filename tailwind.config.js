@@ -4,12 +4,9 @@ const forms = require('@tailwindcss/forms');
 const typography = require('@tailwindcss/typography');
 
 module.exports = {
-    content: ['./components/**/*.twig', './templates/**/*.html.twig'],
-    theme: {
-        extend: {},
-    },
-    plugins: [
-        require('@tailwindcss/forms'),
-        require('@tailwindcss/typography'),
-    ],
-}
+  content: ['./components/**/*.twig', './templates/**/*.html.twig'],
+  theme: {
+    extend: {},
+  },
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+};
