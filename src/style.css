@@ -1,1 +1,5 @@
+@import '/dist/style.css';
+
+/* or check if better
 @import '/components/style.scss';
+*/
