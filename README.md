@@ -9,7 +9,7 @@ To be fast and fun and simple
 ## Stack
 - Drupal 9
 - Vite
-- Tailwind 3 (alpha)
+- TailwindCSS 3 (alpha)
 - AlpineJS 3
 
 ## Inspiration
@@ -43,3 +43,4 @@ To be fast and fun and simple
 - PWA
 - Dev tool
 - Headless
+- Light/Dark theme
