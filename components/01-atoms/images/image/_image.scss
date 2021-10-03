@@ -1,10 +1,6 @@
-@mixin image {
-  @apply block h-auto max-w-full;
-}
-
 img,
 picture {
-  @include image;
+    @apply block h-auto max-w-full;
 }
 
 figure {

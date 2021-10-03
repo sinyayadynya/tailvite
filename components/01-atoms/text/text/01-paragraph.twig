@@ -11,9 +11,8 @@
  *   for example: A formatted text field in Drupal
  */
 #}
-{% set paragraph_base_class = paragraph_base_class|default('paragraph') %}
 
-<p {{ bem(paragraph_base_class, paragraph_modifiers, paragraph_blockname) }}>
+<p class="mb-4">
   {% block paragraph_content %}
     {{ paragraph_content }}
   {% endblock %}

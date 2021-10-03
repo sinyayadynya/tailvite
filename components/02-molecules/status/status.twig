@@ -21,9 +21,6 @@
  *   - class: HTML classes.
  */
 #}
-{% set status__base_class = 'status' %}
-
-{% for type, messages in message_list %}
 
 <div{% if not presentational %} role="contentinfo" {% endif %}
     x-data="{ open: true }" @keydown.window.escape="open = false;"
@@ -73,9 +70,9 @@
                     {% if type %}
                     <h2 class="visually-hidden">{{ type }}</h2>
                     {% endif %}
-                    <ul {{ bem('list', [], status__base_class)}}>
+                    <ul>
                         {% for message in messages %}
-                        <li {{ bem(status__base_class, [type])}}>{{ message }}</li>
+                        <li>{{ message }}</li>
                         {% endfor %}
                     </ul>
                 </div>

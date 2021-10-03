@@ -12,11 +12,8 @@
  *   for example: A formatted text field in Drupal
  */
 #}
-{% set blockquote_base_class = blockquote_base_class|default('blockquote') %}
 
-<blockquote
-  {{ bem(blockquote_base_class, blockquote_modifiers, blockquote_blockname) }}
->
+<blockquote class="italic border-l-4 border-indigo-500 ml-4 pl-4">
   {% block blockquote_content %}
     {{ blockquote_content }}
   {% endblock %}

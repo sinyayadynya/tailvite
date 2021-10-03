@@ -7,16 +7,15 @@
  * - breadcrumb: Breadcrumb trail items.
  */
 #}
-{% set breadcrumb__base_class = 'breadcrumb' %}
 
 {% if breadcrumb %}
   <nav{{ attributes.addClass('max-w-7xl mx-auto px-4 sm:px-6 lg:px-8') }} role='navigation' aria-labelledby='system-breadcrumb'>
-    <h2 {{ bem('sr-only') }} id='system-breadcrumb'>{{ 'Breadcrumb'|t }}</h2>
-    <ol {{ bem(breadcrumb__base_class) }}>
+    <h2 class="sr-only" id='system-breadcrumb'>{{ 'Breadcrumb'|t }}</h2>
+    <ol>
     {% for item in breadcrumb %}
-      <li {{ bem('item', [], breadcrumb__base_class) }}>
+      <li>
         {% if item.url %}
-          <a {{ bem('link', [], breadcrumb__base_class) }} href="{{ item.url }}">{{ item.text }}</a>
+          <a class="link" href="{{ item.url }}">{{ item.text }}</a>
         {% else %}
           {{ item.text }}
         {% endif %}

@@ -164,8 +164,6 @@
   @include heading-xs;
 }
 
-/* TODO: BEM selectors should be applied to wysiwyg-created content */
-
 .text-long {
   h1 {
     @extend .h1;

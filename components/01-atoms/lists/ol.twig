@@ -8,9 +8,7 @@
  * - listItems - TBD
  */
 #}
-{% set ol_base_class = ol_base_class|default('ol') %}
-
-<ol {{ bem(ol_base_class, ol_modifiers, ol_blockname) }}>
+<ol>
   {% block list_content %}
     {% for ol_item in ol_items %}
       {% include "@atoms/lists/_list-item.twig" with {

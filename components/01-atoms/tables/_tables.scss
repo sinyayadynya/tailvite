@@ -21,8 +21,6 @@
     @apply border-b-0;
 }
 
-/* TODO: BEM selectors should be applied to wysiwyg-created content */
-
 .text-long {
   table {
     @extend .table;

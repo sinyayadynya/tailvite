@@ -26,7 +26,7 @@
   {% block list_item_content %}
     {# if drupal #}
     {% if directory %}
-      {{ link(item.title, item.url, bem(item_base_class|default(menu_class ~ '__link'), item_modifiers)) }}
+      {{ link(item.title, item.url, item_modifiers) }}
     {% else %}
       {% include "@atoms/links/link/link.twig" with {
         link_content: item.title,

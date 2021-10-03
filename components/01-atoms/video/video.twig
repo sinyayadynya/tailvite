@@ -14,9 +14,7 @@
  *   for example: to insert an html5 video component
  */
 #}
-{% set video_base_class = video_base_class|default('video') %}
-
-<div {{ bem(video_base_class, video_modifiers, video_blockname) }}>
+<div class="video">
   {% block video_content %}
     {{ video_content|raw }}
   {% endblock %}

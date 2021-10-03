@@ -8,9 +8,8 @@
  * - listItems - TBD
  */
 #}
-{% set ul_base_class = ul_base_class|default('ul') %}
 
-<ul {{ bem(ul_base_class, ul_modifiers, ul_blockname) }}>
+<ul>
   {% block list_content %}
     {% for ul_item in ul_items %}
       {% include "@atoms/lists/_list-item.twig" with {

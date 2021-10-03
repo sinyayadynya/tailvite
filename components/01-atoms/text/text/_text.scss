@@ -5,34 +5,18 @@ body {
   @apply leading-relaxed;
 }
 
-.paragraph {
-  @apply mb-4;
-}
-
-.blockquote {
-  @apply italic;
-  @apply border-l-4 border-indigo-500;
-  @apply ml-4 pl-4;
-}
-
-.hr {
-  @apply border border-solid;
-
-  color: currentColor;
-}
-
-/* TODO: BEM selectors should be applied to wysiwyg-created content */
-
 .text-long {
   p {
-    @extend .paragraph;
+    @apply mb-4;
   }
 
   blockquote {
-    @extend .blockquote;
+    @apply italic border-l-4 border-indigo-500 ml-4 pl-4;
   }
 
   hr {
-    @extend .hr;
+    @apply border border-solid;
+
+    color: currentColor;
   }
 }
