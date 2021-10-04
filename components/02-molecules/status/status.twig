@@ -21,6 +21,7 @@
  *   - class: HTML classes.
  */
 #}
+{% for type, messages in message_list %}
 
 <div{% if not presentational %} role="contentinfo" {% endif %}
     x-data="{ open: true }" @keydown.window.escape="open = false;"
