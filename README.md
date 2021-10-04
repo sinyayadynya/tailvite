@@ -28,11 +28,11 @@ To be fast and fun and simple
 - Make it works: Tailwind + Alpine integration not yet successful!
 
 ## Requiered Drupal modules
-- Components: https://drupal.org/projects/components
-- Single File Components: https://drupal.org/projects/sfc
-- Bamboo Twig: https://drupal.org/projects/bamboo_twig
-- Simplify Menu: https://drupal.org/projects/simplify_menu
-- External-use Icons: https://drupal.org/projects/ex_icons
+- Components: https://drupal.org/project/components
+- Single File Components: https://drupal.org/project/sfc
+- Bamboo Twig: https://drupal.org/project/bamboo_twig
+- Simplify Menu: https://drupal.org/project/simplify_menu
+- External-use Icons: https://drupal.org/project/ex_icons
 
 ## Patch
 - https://www.drupal.org/project/sfc/issues/3205989
