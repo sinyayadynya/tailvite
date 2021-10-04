@@ -7,9 +7,10 @@ export default {
     // generate manifest.json in outDir
     manifest: true,
     rollupOptions: {
-      // overwrite default .html entry
+
       // check if '/components/style.scss' is correct
-      input: ['/components/style.scss', '/src/main.js'],
+      // Css file must be imported in js files, see main.js
+      input: ['/src/main.js'],
       // Remove the [hash] since Drupal will take care of that.
       output: {
         entryFileNames: `[name].js`,
