@@ -4,3 +4,117 @@
  * @file
  * Functions to support theming.
  */
+
+use Drupal\Core\Site\Settings;
+
+/**
+ * Implements hook_library_info_alter().
+ */
+function tailvite_library_info_alter(&$libraries, $extension)
+{
+  if ($extension !== 'tailvite') {
+    return;
+  }
+
+  $local = Settings::get('hot_module_replacement');
+
+  // kint($libraries, $local);
+  // Replace library paths so they are ready for either Dev or Prd.
+  // For Dev we need to load all assets via ViteJS, no need for parssing CSS
+  // All css must be imported in main.js
+  foreach ($libraries as $library => $settings) {
+    // foreach ($settings['css'] as $type => $paths) {
+    //   foreach ($paths as $path => $options) {
+    //     _tailvite_replace_library($libraries[$library]['css'][$type], $path, $options);
+    //   }
+    // }
+
+    foreach ($settings['js'] as $path => $options) {
+      _tailvite_replace_library($libraries[$library]['js'], $path, $options);
+    }
+  }
+
+  // Exit if local development. Everything after will be for production.
+  if ($local) {
+    return;
+  }
+
+  // Remove the HMR client library.
+  unset($libraries['hot-module-replacement']);
+
+  // Read the production Manifest file to find CSS files imported via JS files.
+  $manifest_file = file_get_contents(__DIR__  . '/dist/manifest.json');
+  $manifest = json_decode($manifest_file);
+
+  foreach ($manifest as $key => $data) {
+    // Ignore files that will be imported via js.
+    if (preg_match('/^_/', $key)) {
+      continue;
+    }
+
+    if (!empty($data->css)) {
+      foreach ($data->css as $css_file) {
+        // Search through each library.
+        foreach ($libraries as $library => $settings) {
+          foreach ($settings['js'] as $path => $options) {
+            $js_path = 'dist/' . $data->file;
+            if ($path == $js_path) {
+              $libraries[$library]['css']['component']["dist/${css_file}"] = [];
+            }
+            // kint($libraries);
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Replace an asset path with one that works with Vite.
+ *
+ * @param array $library
+ *   The library to be altered.
+ * @param string $path
+ *   The file path and name.
+ * @param array $options
+ *   Any settings that were part of the original file's settings.
+ */
+function _tailvite_replace_library(array &$library, string $path, array $options): void
+{
+  // Ignore external paths
+  if (preg_match('/^(http|:\/\/)/', $path)) {
+    return;
+  }
+
+  $local = Settings::get('hot_module_replacement');
+  $dir = 'dist';
+
+  // Remove the old library info.
+  unset($library[$path]);
+
+  if ($local) {
+    $dir = 'http://localhost:12321';
+    $options['type'] = 'external';
+    if (preg_match('/.m?js$/', $path)) {
+      $options['crossorigin'] = TRUE;
+    }
+  } else {
+    // Convert .scss files to .css
+    $path = preg_replace('/.s[ac]ss$/', '.css', $path);
+    // Strip off all but the filename.
+    $path = basename($path);
+  }
+
+  // Prepend the local development url.
+  $path = "${dir}/${path}";
+  // Add in the new altered library.
+  $library[$path] = $options;
+}
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function tailvite_preprocess_html(&$variables)
+{
+  $variables['#attached']['drupalSettings']['path']['themeUrl'] = \Drupal::theme()->getActiveTheme()->getPath();
+}
