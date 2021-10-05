@@ -8,7 +8,7 @@ core_version_requirement: ^8 || ^9
 libraries:
   - tailvite/global
   - tailvite/hot-module-replacement
-  - tailvite/fontinte
+  - tailvite/fontinter
 
 regions:
   header: Header
