@@ -16,23 +16,9 @@
 #}
 {%
   set link_classes = [
-    is_active ? 'is-active' : '',
-    'tabs__link--local-tasks'
+      'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm',
+      is_active ? 'border-indigo-500 text-indigo-600 hover:border-indigo-500 hover:text-indigo-600' : '',
   ]
 %}
 
-{# if Storybook atoms example, add ul wrapper #}
-{% if example %}
-<nav class="-mb-px lg:flex lg:space-x-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-{% endif %}
-<div{{ attributes }}>
-  {# Detect if Drupal #}
-  {% if attributes %}
-    {{ link(link['#title'], link['#url'], { 'class' : link_classes }) }}
-  {% else %}
-    <a href="{{ tab_link }}" class="tabs__link tabs__link--local-tasks{% if key == 0 %} is-active{% endif %}">{{ tab_text }}</a>
-  {% endif %}
-</div>
-{% if example %}
-</nav>
-{% endif %}
+{{ link(link['#title'], link['#url'], { 'class' : link_classes }) }}

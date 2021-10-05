@@ -11,11 +11,11 @@
 {% if breadcrumb %}
   <nav{{ attributes.addClass('max-w-7xl mx-auto px-4 sm:px-6 lg:px-8') }} role='navigation' aria-labelledby='system-breadcrumb'>
     <h2 class="sr-only" id='system-breadcrumb'>{{ 'Breadcrumb'|t }}</h2>
-    <ol>
+    <ol role="list" class="flex items-center space-x-4">
     {% for item in breadcrumb %}
       <li>
         {% if item.url %}
-          <a class="link" href="{{ item.url }}">{{ item.text }}</a>
+          <a class="text-sm font-medium text-gray-500 hover:text-gray-700" href="{{ item.url }}">{{ item.text }}</a>
         {% else %}
           {{ item.text }}
         {% endif %}

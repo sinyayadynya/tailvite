@@ -12,36 +12,18 @@
  */
 #}
 
-{# Drupal Specific #}
 {% if primary %}
-  <div class="py-4 border-b border-gray-200">
-    <h2 class="visually-hidden">{{ 'Primary tabs'|t }}</h2>
-    <nav class="-mb-1 flex space-x-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">{{ primary }}</nav>
+  <div class="hidden sm:block sm:py-4">
+    <h2 class="sr-only">{{ 'Primary tabs'|t }}</h2>
+    <div class="border-b border-gray-200">
+        <nav{{ attributes.addClass('-mb-px flex space-x-8') }}>
+            {{ primary }}
+        </nav>
+    </div>
   </div>
-{% endif %}
-{% if secondary %}
-  <h2 class="visually-hidden">{{ 'Secondary tabs'|t }}</h2>
-  <nav class="-mb-px flex space-x-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">{{ secondary }}</nav>
 {% endif %}
 
-{# Component Library Specific (javascript version) #}
-{% if not primary %}
-{{ attach_library('emulsify/tabs') }}
-  <div id="tabs" class="tabs no-js">
-    <ul class="tabs__nav">
-      {% for key, tab in tabs %}
-        {% include "@molecules/tabs/_tab.twig" with {
-          tab_link: "#tab-" ~ key,
-          tab_text: tab.tab_text,
-        } %}
-      {% endfor %}
-    </ul>
-    {% for key, tab in tabs %}
-      <div class="tabs__tab{% if key == 0 %} is-active{% endif %}">
-        <div id="tab-{{ key }}" class="tabs__content">
-          <p>{{ tab.tab_content }}</p>
-        </div>
-      </div>
-    {% endfor %}
-  </div>
+{% if secondary %}
+  <h2 class="sr-only">{{ 'Secondary tabs'|t }}</h2>
+  <nav class="-mb-px flex space-x-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">{{ secondary }}</nav>
 {% endif %}
