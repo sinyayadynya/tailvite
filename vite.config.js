@@ -1,13 +1,12 @@
 import liveReload from 'vite-plugin-live-reload';
 
 export default {
-  plugins: [liveReload(__dirname + '/**/*.(php|inc|theme|twig)')],
+  plugins: [liveReload(__dirname + '/**/*.(php|inc|theme|twig|scss)')],
 
   build: {
     // generate manifest.json in outDir
     manifest: true,
     rollupOptions: {
-
       // check if '/components/style.scss' is correct
       // Css file must be imported in js files, see main.js
       input: ['/src/main.js'],
