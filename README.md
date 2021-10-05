@@ -24,6 +24,7 @@ To be fast and fun and simple
 - https://github.com/cereschen/vite-plugin-svg-sprite-component
 
 ## To do
+- Check if possible to import .scss components files into ./components/style.scss
 - Check ESLint & Prettier setup + config
 
 ## Requiered Drupal modules
