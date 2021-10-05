@@ -32,10 +32,10 @@
       &--active,
       &:active,
       &.active {
-        @apply border-indigo-500 text-gray-900;
+        @apply border-primary-500 text-gray-900;
 
         &:focus {
-          @apply outline-none border-indigo-700;
+          @apply outline-none border-primary-700;
         }
       }
 

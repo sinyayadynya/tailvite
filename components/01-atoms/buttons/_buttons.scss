@@ -2,10 +2,10 @@ button[type='button'] {
     @apply inline-flex items-center border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2;
 
     &.button {
-        @apply bg-white py-2 px-4 border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:ring-indigo-500;
+        @apply bg-white py-2 px-4 border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:ring-primary-500;
     }
 
     &.button--primary {
-        @apply px-4 py-2 border-transparent text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500;
+        @apply px-4 py-2 border-transparent text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:ring-primary-500;
     }
 }

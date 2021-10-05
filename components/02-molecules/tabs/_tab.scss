@@ -11,14 +11,14 @@
   }
 
   &.is-active {
-    @apply text-indigo-600 border-indigo-500;
+    @apply text-primary-600 border-primary-500;
 
     @include lg {
       // Empty
     }
 
     &:focus {
-      @apply outline-none text-indigo-800 border-indigo-700;
+      @apply outline-none text-primary-800 border-primary-700;
     }
   }
 }

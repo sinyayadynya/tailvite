@@ -1,7 +1,7 @@
 input#edit-preview {
-    @apply bg-white border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-indigo-500;
+    @apply bg-white border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-primary-500;
 }
 
 input#edit-submit {
-    @apply border-transparent text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500;
+    @apply border-transparent text-white bg-primary-600 hover:bg-primary-700 focus:ring-primary-500;
 }
