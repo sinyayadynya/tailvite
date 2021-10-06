@@ -2,7 +2,7 @@
     <div class="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
         <div>
             <a href="{{ url('<front>') }}" class="flex">
-            <span class="sr-only">Tailvite</span>
+            <span class="sr-only">{{ bamboo_token('site:name') }}</span>
             <img class="h-8 w-auto sm:h-10" src="/{{ active_theme_path() }}/images/logos/mark-on-white.svg" alt="" />
         </a>
         </div>
@@ -15,18 +15,19 @@
             </button>
         </div>
         <div class="hidden md:flex-1 md:flex md:items-center md:justify-between">
+            {# Get menu items #}
+            {% set items = simplify_menu('main') %}
+
+            {# Iterate menu tree #}
             <nav class="flex space-x-10">
-
-                <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Product</a>
-
-                <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Features</a>
-
-                <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Marketplace</a>
-
-                <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Company</a>
-
-                <a href="/user/login" class="font-medium text-primary-600 hover:text-primary-500">Log in</a>
-
+            {% for menu_item in items.menu_tree %}
+                <a href="{{ menu_item.url }}" class="font-medium text-gray-500 hover:text-gray-900">{{ menu_item.text }}</a>
+            {% endfor %}
+            {% if logged_in %}
+            <a href="/user/logout" class="font-medium text-primary-600 hover:text-primary-500">{{ 'Log out'|trans }}</a>
+            {% else %}
+            <a href="/user/login" class="font-medium text-primary-600 hover:text-primary-500">{{ 'Log in'|trans }}</a>
+            {% endif %}
             </nav>
 
         </div>
@@ -52,17 +53,19 @@
                     </div>
                 </div>
                 <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Product</a>
-
-                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Features</a>
-
-                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Marketplace</a>
-
-                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Company</a>
+                    {% for menu_item in items.menu_tree %}
+                        <a href="{{ menu_item.url }}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">{{ menu_item.text }}</a>
+                    {% endfor %}
                 </div>
-                <a href="/user/login" class="block w-full px-5 py-3 text-center font-medium text-primary-600 bg-gray-50 hover:bg-gray-100">
-                    Log in
+                {% if logged_in %}
+                <a href="/user/logout" class="block w-full px-5 py-3 text-center font-medium text-primary-600 bg-gray-50 hover:bg-gray-100">
+                    {{ 'Log out'|trans }}
                 </a>
+                {% else %}
+                <a href="/user/login" class="block w-full px-5 py-3 text-center font-medium text-primary-600 bg-gray-50 hover:bg-gray-100">
+                    {{ 'Log in'|trans }}
+                </a>
+                {% endif %}
             </div>
         </div>
     </div>
