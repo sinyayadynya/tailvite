@@ -20,6 +20,12 @@
         "issues": "https://github.com/sinyayadynya/tailvite/issues",
         "source": "https://github.com/sinyayadynya/tailvite"
     },
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
