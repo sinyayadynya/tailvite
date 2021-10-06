@@ -40,3 +40,4 @@ To be fast and fun and simple
 
 ## Coming soon
 - Dark Mode
+- Style Guide
