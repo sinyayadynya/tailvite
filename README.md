@@ -1,7 +1,7 @@
 # Tailvite
 
 ## Description
-Tailvite is a Drupal 9 starterkit theme with Atomic Design structure, inspired by Emulsify, but using Vite instead of Webpack, TailwindCSS components instead of BEM and AlpineJS instead of jQuery.
+Tailvite is a Drupal 9 starterkit theme with Atomic Design structure, inspired by [Emulsify](https://github.com/emulsify-ds/emulsify-drupal), but using Vite instead of Webpack, TailwindCSS components instead of BEM and AlpineJS instead of jQuery.
 
 ## Aim
 To be fast and fun and simple
@@ -35,8 +35,8 @@ To be fast and fun and simple
 ## To do
 - Check ESLint & Prettier setup + config
 
-## Patch (if using https://github.com/tanc/vite-plugin-sfc-reload)
-- https://www.drupal.org/project/sfc/issues/3205989
+## Patch
+- https://www.drupal.org/project/sfc/issues/3205989 (if using https://github.com/tanc/vite-plugin-sfc-reload)
 
 ## Coming soon
 - Dark Mode
