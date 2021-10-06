@@ -1,0 +1,29 @@
+{
+    "name": "sinyayadynya/tailvite",
+    "description": "TailwindCSS + AlpindJS + Vite + Drupal 9 theme",
+    "type": "drupal-theme",
+    "homepage": "https://github.com/sinyayadynya/tailvite",
+    "license": "GPL-2.0-only",
+    "authors": [
+      {
+        "name": "Dan Metille",
+        "homepage": "https://bluemelon.io",
+        "email": "dan@bluemelon.io"
+      },
+      {
+          "name": "Chris Martin",
+          "homepage": "https://chehabi.me/",
+          "email": "adil@chehabi.ma"
+      }
+    ],
+    "support": {
+        "issues": "https://github.com/sinyayadynya/tailvite/issues",
+        "source": "https://github.com/sinyayadynya/tailvite"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "drupal/components": "^2.4",
+        "drupal/simplify_menu": "^2.1"
+    }
+}

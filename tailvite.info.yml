@@ -4,6 +4,9 @@ description: 'A Drupal base theme build with Vite, TailwindCSS & AlpineJS.'
 base theme: stable
 core: 8.x
 core_version_requirement: ^8 || ^9
+dependencies:
+  - drupal:components
+  - drupal:simplify_menu
 
 libraries:
   - tailvite/global
