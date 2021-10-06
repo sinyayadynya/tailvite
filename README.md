@@ -1,4 +1,4 @@
-# Tailvite - Work in progress
+# Tailvite
 
 ## Description
 Tailvite is a Drupal 9 starterkit theme with Atomic Design structure, inspired by Emulsify, but using Vite instead of Webpack, TailwindCSS components instead of BEM and AlpineJS instead of jQuery.
@@ -18,28 +18,25 @@ To be fast and fun and simple
 - https://github.com/chkilel/vitewind-theme
 - https://github.com/segovia94/drupal-vite-poc
 
+## Requiered Drupal modules
+- Components: https://drupal.org/project/components
+- Bamboo Twig: https://drupal.org/project/bamboo_twig
+- Simplify Menu: https://drupal.org/project/simplify_menu
+
+## Recommended Drupal modules
+- Single File Components: https://drupal.org/project/sfc
+- External-use Icons: https://drupal.org/project/ex_icons
+
 ## To evaluate/integrate
 - https://github.com/arnoson/vite-plugin-live-reload
 - https://github.com/tanc/vite-plugin-sfc-reload
 - https://github.com/cereschen/vite-plugin-svg-sprite-component
 
 ## To do
-- Check if possible to import .scss components files into ./components/style.scss
 - Check ESLint & Prettier setup + config
-
-## Requiered Drupal modules
-- Components: https://drupal.org/project/components
-- Bamboo Twig: https://drupal.org/project/bamboo_twig
-- Simplify Menu: https://drupal.org/project/simplify_menu
-- External-use Icons: https://drupal.org/project/ex_icons (move to recommended after deleting icons in footer)
-
-## Recommended Drupal modules
-- Single File Components: https://drupal.org/project/sfc
 
 ## Patch (if using https://github.com/tanc/vite-plugin-sfc-reload)
 - https://www.drupal.org/project/sfc/issues/3205989
 
-## Future options
-- Storybook integration: https://storybook.js.org/blog/storybook-for-vite
-- PWA: https://github.com/antfu/vite-plugin-pwa
+## Coming soon
 - Dark Mode
