@@ -1,0 +1,19 @@
+# Breakpoints - based on Tailwind default
+tailvite.small:
+  label: xs
+  mediaQuery: 'all and (min-width: 25em)'
+tailvite.sm:
+  label: sm
+  mediaQuery: 'all and (min-width: 40em)'
+tailvite.md:
+  label: md
+  mediaQuery: 'all and (min-width: 48em)'
+tailvite.lg:
+  label: lg
+  mediaQuery: 'all and (min-width: 64em)'
+tailvite.xl:
+  label: xl
+  mediaQuery: 'all and (min-width: 80em)'
+tailvite.2xl:
+  label: 2xl
+  mediaQuery: 'all and (min-width: 96em)'
