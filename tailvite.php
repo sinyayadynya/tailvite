@@ -501,6 +501,7 @@ function _tailvite_get_files_to_copy() {
     return array_merge($default_array, array(
       'components',
       'images',
+      'src',
       'templates',
       'README.md',
       'screenshot.png',
