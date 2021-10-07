@@ -10,6 +10,4 @@
  * @see template_preprocess_input()
  */
 #}
-<div class="max-w-lg sm:max-w-xs">
-  <input{{ attributes.addClass('max-w-lg mt-1 shadow-sm focus:ring-primary-500 focus:border-primary-500 block w-full sm:text-sm border-gray-300 rounded-md') }}  />{{ children }}
-</div>
+{% include "@atoms/forms/_input-file.twig" %}

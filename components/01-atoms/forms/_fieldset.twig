@@ -32,7 +32,7 @@
 <fieldset{{ attributes.addClass(classes) }}>
   {%
     set legend_classes = [
-      'h2',
+      'mb-1 block text-sm font-medium text-gray-700',
       required ? 'js-form-required',
       required ? 'form-required',
     ]
@@ -52,6 +52,6 @@
     <span class="field-suffix">{{ suffix }}</span>
   {% endif %}
   {% if description.content %}
-    <div{{ description.attributes.addClass('description') }}>{{ description.content }}</div>
+    <div{{ description.attributes.addClass('mt-2 text-sm text-gray-500') }}>{{ description.content }}</div>
   {% endif %}
 </fieldset>
