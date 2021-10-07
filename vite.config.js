@@ -7,7 +7,6 @@ export default {
     // generate manifest.json in outDir
     manifest: true,
     rollupOptions: {
-      // check if '/components/style.scss' is correct
       // Css file must be imported in js files, see main.js
       input: ['/src/main.js'],
       // Remove the [hash] since Drupal will take care of that.
@@ -33,7 +32,6 @@ export default {
     },
   },
 
-  // not sure about this one, inspired from https://github.com/segovia94/drupal-vite-poc
   resolve: {
     alias: {
       jquery: '/src/jquery.module.js',
