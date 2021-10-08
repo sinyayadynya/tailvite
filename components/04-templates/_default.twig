@@ -1,36 +1,36 @@
-{% set sidebar = page.sidebar|render|striptags|trim is not empty %}
+<div class="container">
 
-<div>
     {% block page_header %}
         {% include "@organisms/site/site-header/site-header.twig" %}
     {% endblock %}
     {% block page_system %}
     {% endblock %}
 
-    <div>
-
+    <main role="main">
         <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-        {% if page.sidebar %}
-        <div class="md:h-screen md:grid md:grid-cols-6">
-            <aside role="complementary" class="md:col-span-1">
-                <div class="px-4">
-                    {% block page_sidebar %}{% endblock %}
-                </div>
-            </aside>
-            <main role="main" class="md:col-span-5">
-        {% else %}
-        <main role="main">
-        {% endif %}
-            {% block page_content %}{% endblock %}
-            </main>
-        {% if page.sidebar %}
-        </div>
-        {% endif %}
+        <div class="md:flex">
+            <div class="pb-4 md:flex-1 md:pb-0">
+                {% block page_content %}{% endblock %}
+            </div>{# /.layout-content #}
 
-    </div>
+            {% if page.sidebar %}
+            <aside class="px-4 md:w-1/4" role="complementary">
+                {% block page_sidebar %}{% endblock %}
+            </aside>
+            {% endif %}
+
+            {# {% if page.sidebar_second %}
+            <aside class="md:w-1/4" role="complementary">
+                {{ page.sidebar_second }}
+            </aside>
+            {% endif %} #}
+
+        </div>
+    </main>
 
     {% block page_footer %}
         {% include "@organisms/site/site-footer/site-footer.twig" %}
     {% endblock %}
+
 </div>
