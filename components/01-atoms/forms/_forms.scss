@@ -13,3 +13,9 @@
        @apply focus:ring-red-500 focus:border-red-500 border-red-300;
     }
 }
+
+
+// Form description
+.form-item__description {
+    @apply mt-2 text-sm text-gray-500;
+}
