@@ -795,7 +795,7 @@ function _tailvite_notify_fail($path = '', $message = '') {
  */
 function _tailvite_notify_success($human_readable_name, $theme_path) {
   // Notify user of the newly created theme.
-  $message = 'Successfully created the tailvite theme "!name" created in: !path, you can now run \'yarn\' or \'npm install\' to install.';
+  $message = 'Successfully created the tailvite theme "!name" created in: !path, you can now run \'npm install\' to install.';
 
   $message = dt($message, array(
     '!name' => $human_readable_name,
