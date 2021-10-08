@@ -33,6 +33,7 @@ To be fast and fun and simple
 - https://github.com/cereschen/vite-plugin-svg-sprite-component
 
 ## To do
+- Complete basic components theming
 - Check ESLint & Prettier setup + config
 
 ## Patch
