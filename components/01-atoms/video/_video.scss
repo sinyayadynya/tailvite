@@ -1,20 +1,12 @@
 /* Responsive Video using CSS only */
 .video {
-  height: 0;
-  overflow: hidden;
-  padding-top: 35px;
-  padding-bottom: 56.25%; /* 56.25% = 16x9 */
-  position: relative;
+    @apply relative h-0 pb-[56.25%]; /* 56.25% = 16x9 */
 
-  iframe {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
+    iframe {
+        @apply absolute top-0 left-0 width-full height-full;
+    }
 }
 
 .video--full {
-  padding-bottom: 75%; /* 75% = 4x3 */
+    @apply pb-[75%]; /* 75% = 4x3 */
 }
