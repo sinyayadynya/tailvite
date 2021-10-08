@@ -1,15 +1,8 @@
 # Use the source path instead of destination. "scss/styles.scss" instead of "dist/css".
 # Paths will be altered for local or prod with hook_library_info_alter().
 global:
-  # css:
-  #   theme:
-  #     # src/style.css: {}
-  #     # don't work with the above line, while the line below dosn't seem correct
-  #     # dist/style.css: {}
   js:
     src/main.js: { attributes: { type: 'module'}}
-    # don't work with the above line, while the line below dosn't seem correct
-    # dist/main.js: { attributes: { type: 'module'}}
   dependencies:
     - core/jquery
     - core/drupalSettings
