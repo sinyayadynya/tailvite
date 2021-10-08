@@ -5,6 +5,11 @@
  * Functions to support theming.
  */
 
+
+/**
+ * Functions to support Vite.
+ */
+
 use Drupal\Core\Site\Settings;
 
 /**
