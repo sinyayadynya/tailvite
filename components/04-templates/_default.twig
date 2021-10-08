@@ -1,21 +1,55 @@
+{% set sidebar = page.sidebar|render|striptags|trim is not empty %}
+
 <div>
-  {% block page_header %}
-    {% include "@organisms/site/site-header/site-header.twig" %}
-  {% endblock %}
-  {% block page_system %}
-  {% endblock %}
-  <div>
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    {% block page_header %}
+        {% include "@organisms/site/site-header/site-header.twig" %}
+    {% endblock %}
+    {% block page_system %}
+    {% endblock %}
+
     {% if sidebar %}
-      <aside class="main-sidebar" role="complementary">
-        {% block page_sidebar %}{% endblock %}
-      </aside>
+    <div class="flex flex-col md:flex-row">
+    {% else %}
+    <div>
     {% endif %}
-    <main role="main">
-      {% block page_content %}{% endblock %}
-    </main>
-  </div>
-  {% block page_footer %}
-    {% include "@organisms/site/site-footer/site-footer.twig" %}
-  {% endblock %}
+        <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+        {% if sidebar %}
+
+        <aside class="md:flex md:flex-shrink-0" role="complementary">
+            <div class="flex flex-col w-64">
+
+                <div class="flex flex-col h-0 flex-1 border-r border-gray-200 bg-white">
+                    <div class="flex-1 flex flex-col pt-6 pb-4 overflow-y-auto">
+                        <div class="px-4">
+                            {% block page_sidebar %}{% endblock %}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </aside>
+
+        <div class="flex flex-col w-0 flex-1 overflow-hidden">
+            <main class="flex-1 relative z-0 overflow-y-auto focus:outline-none">
+                <div class="py-6">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+        {% else %}
+        <main role="main">
+        {% endif %}
+            {% block page_content %}{% endblock %}
+        {% if sidebar %}
+                    </div>
+                </div>
+            </main>
+        </div>
+        {% else %}
+        </main>
+        {% endif %}
+
+    </div>
+
+    {% block page_footer %}
+        {% include "@organisms/site/site-footer/site-footer.twig" %}
+    {% endblock %}
 </div>
