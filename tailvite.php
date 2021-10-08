@@ -201,7 +201,7 @@ function tailvite_drush_command() {
   $items = array();
 
   $items['tailvite'] = array(
-    'description' => 'Create an tailvite-based theme.',
+    'description' => 'Create a Tailvite-based theme.',
     'arguments' => array(
       'human_readable_name' => 'The name of your theme.',
     ),
@@ -212,7 +212,7 @@ function tailvite_drush_command() {
       'slim' => 'Only copy base files',
     ),
     'examples' => array(
-      'php tailvite.php "My Awesome Theme"' => 'Creates an tailvite theme called "My Awesome Theme", using the default options.',
+      'php tailvite.php "My Awesome Theme"' => 'Creates a Tailvite theme called "My Awesome Theme", using the default options.',
       'php tailvite.php "My Awesome Theme" --machine-name mat' => 'Creates a tailvite theme called "My Awesome Theme" with the specific machine name "mat".',
     ),
   );
@@ -226,7 +226,7 @@ function tailvite_drush_command() {
 function tailvite_drush_help($section) {
   switch ($section) {
     case 'drush:tailvite':
-      return dt('This command will create an tailvite theme. See examples to get started.');
+      return dt('This command will create a Tailvite theme. See examples to get started.');
   }
 }
 
