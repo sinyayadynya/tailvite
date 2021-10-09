@@ -1,4 +1,4 @@
-![splash](https://user-images.githubusercontent.com/941179/136659509-47684794-9ce5-437e-a46a-dfab2f29deb7.png)
+![splash](https://user-images.githubusercontent.com/941179/136665292-c9127d0b-8447-400d-aea4-b19cd7d0187f.png)
 
 
 # Tailvite
