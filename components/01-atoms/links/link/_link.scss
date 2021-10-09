@@ -1,8 +1,8 @@
 @mixin link {
-  @apply text-red-500;
+  @apply text-primary-500;
 
   &:hover {
-    @apply text-red-400;
+    @apply text-primary-400;
   }
 }
 
