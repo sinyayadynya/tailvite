@@ -4,23 +4,7 @@
 */
 
 @mixin heading-xl {
-  @apply text-gray-900;
-  @apply font-sans;
-  @apply font-extrabold;
-  @apply not-italic;
-  // @apply text-4xl;
-  // @apply leading-10; // In Emulsify: $line-height: 1.4
-  // @apply mb-2; // From Emulsify only
-  @apply w-auto; // From Emulsify only
-
-  @include sm {
-    // @apply text-5xl;
-    // @apply leading-none;
-  }
-
-  @include md {
-    // @apply text-6xl;
-  }
+  @apply text-gray-900 text-4xl font-sans font-extrabold leading-none not-italic sm:text-5xl md:text-6xl;
 
   &__link {
     @apply text-primary-500;
@@ -32,23 +16,7 @@
 }
 
 @mixin heading-large {
-  @apply text-gray-900;
-  @apply font-sans;
-  @apply font-extrabold;
-  @apply not-italic;
-  // @apply text-3xl;
-  // @apply leading-10; // In Emulsify: $line-height: 1.4
-  // @apply mb-2; // From Emulsify only
-  @apply w-auto; // From Emulsify only
-
-  @include sm {
-    // @apply text-4xl;
-    // @apply leading-none;
-  }
-
-  @include md {
-    // @apply text-5xl;
-  }
+  @apply text-gray-900 text-3xl font-sans font-extrabold leading-none not-italic sm:text-4xl md:text-5xl;
 
   &__link {
     @apply text-primary-500;
@@ -60,23 +28,7 @@
 }
 
 @mixin heading-medium {
-  @apply text-gray-900;
-  @apply font-sans;
-  @apply font-extrabold;
-  @apply not-italic;
-  // @apply text-2xl;
-  // @apply leading-10; // In Emulsify: $line-height: 1.6
-  // @apply mb-2; // From Emulsify only
-  // @apply w-auto; // From Emulsify only
-
-  @include sm {
-    // @apply text-3xl;
-    // @apply leading-none;
-  }
-
-  @include md {
-    // @apply text-4xl;
-  }
+  @apply text-gray-900 text-2xl font-sans font-extrabold leading-none not-italic sm:text-3xl md:text-4xl;
 
   &__link {
     @apply text-primary-500;
@@ -88,23 +40,7 @@
 }
 
 @mixin heading-small {
-  @apply text-gray-900;
-  @apply font-sans;
-  @apply font-bold;
-  @apply not-italic;
-  // @apply text-xl;
-  // @apply leading-10; // In Emulsify: $line-height: 1.6
-  // @apply mb-2; // From Emulsify only
-  // @apply w-auto; // From Emulsify only
-
-  @include sm {
-    // @apply text-2xl;
-    // @apply leading-none;
-  }
-
-  @include md {
-    // @apply text-3xl;
-  }
+  @apply text-gray-900 text-xl font-sans font-extrabold leading-none not-italic sm:text-2xl md:text-3xl;
 
   &__link {
     @apply text-primary-500;
@@ -116,23 +52,7 @@
 }
 
 @mixin heading-xs {
-  @apply text-gray-900;
-  @apply font-sans;
-  @apply font-bold;
-  @apply not-italic;
-  // @apply text-lg;
-  // @apply leading-10; // In Emulsify: $line-height: 2
-  // @apply mb-2; // From Emulsify only
-  // @apply w-auto; // From Emulsify only
-
-  @include sm {
-    // @apply text-xl;
-    // @apply leading-none;
-  }
-
-  @include md {
-    // @apply text-2xl;
-  }
+  @apply text-gray-900 text-lg font-sans font-extrabold leading-none not-italic sm:text-xl md:text-2xl;
 
   &__link {
     @apply text-primary-500;
