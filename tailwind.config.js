@@ -18,7 +18,11 @@ module.exports = {
       red: colors.red,
       green: colors.green,
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
 };
