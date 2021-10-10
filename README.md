@@ -15,6 +15,9 @@ To be fast and fun and simple
 - TailwindCSS 3 (alpha)
 - AlpineJS 3
 
+## Installation
+- Check the [doc](https://sinyayadynya.github.io/tailvite/)
+
 ## Inspiration
 - https://tailwindcss.com/docs/guides/vue-3-vite
 - https://github.com/emulsify-ds/emulsify-drupal
