@@ -1,5 +1,3 @@
-# Tailvite Doc
-
 ## Installation
 
 ### Requirements
