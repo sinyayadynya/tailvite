@@ -20,7 +20,7 @@
     "vite": "^2.6.0"
   },
   "dependencies": {
-    "alpinejs": "^3.4.2",
+    "alpinejs": "^3.5.1",
     "sass": "^1.42.1",
     "vite-plugin-live-reload": "^2.1.0"
   }
